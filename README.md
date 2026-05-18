@@ -2,25 +2,35 @@
 
 DeFi platform on Kite Mainnet: stablecoin DEX, LSD-KITE liquid staking, yield aggregator.
 
-## Phase 1: DEX Core Smart Contracts
+## Structure
 
-- AMM Pool with constant product formula
-- PoolFactory for creating trading pairs
-- Router for multi-hop swaps
-- LP token management
-- 0.3% swap fee
+- `contracts/` — Foundry smart contracts (AMM Pool, PoolFactory, Router)
+- `web/` — Next.js 15 frontend with swap UI, pool browser, liquidity management
+
+## Smart Contracts
+
+- Pool.sol - AMM with constant product formula
+- PoolFactory.sol - Factory for creating trading pairs
+- Router.sol - Multi-hop swap router
+- LpToken.sol - LP token for liquidity providers
+
+## Frontend
+
+- Swap UI with price quotes
+- Pool browser
+- Add/remove liquidity
+- Wallet connect (wagmi)
 
 ## Development
 
 ```bash
+# Contracts
 cd contracts
 forge build
 forge test
+
+# Frontend
+cd web
+pnpm install
+pnpm dev
 ```
-
-## Contracts
-
-- `Pool.sol` - AMM pool with liquidity management
-- `PoolFactory.sol` - Factory for creating pools
-- `Router.sol` - Multi-hop swap router
-- `LpToken.sol` - LP token for liquidity providers
