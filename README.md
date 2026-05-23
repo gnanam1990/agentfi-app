@@ -2,6 +2,13 @@
 
 DeFi platform on Kite Mainnet: stablecoin DEX, LSD-KITE liquid staking, yield aggregator.
 
+## Deployment
+
+- **Production:** https://agentfi-app.vercel.app
+- **Host:** Vercel (`agentfi-app`)
+- **Status:** production URL verified; real swaps/liquidity require contract addresses, wallet config, and production RPC settings
+- **Last verified:** 2026-05-23
+
 ## Structure
 
 - `contracts/` — Foundry smart contracts (AMM Pool, PoolFactory, Router)
