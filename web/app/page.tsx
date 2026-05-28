@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const metrics = [
@@ -20,6 +21,14 @@ export default function HomePage() {
       <div className="container max-w-screen-2xl space-y-8 px-4 py-6">
         <div className="flex flex-col gap-5 border-b border-border pb-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl space-y-3">
+            <Image
+              src="/kite-logo-mark-black.png"
+              alt="Kite"
+              width={48}
+              height={48}
+              priority
+              className="h-12 w-12 object-contain"
+            />
             <p className="text-xs font-semibold uppercase text-muted-foreground">
               Kite Mainnet DeFi
             </p>
